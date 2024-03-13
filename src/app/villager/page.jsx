@@ -5,11 +5,22 @@ import fetchData from "../../api/fetch";
 import bday from "../../../public/images/birthday/bday-cake.png";
 import NewVillagerBtn from "../components/NewVillagerBtn";
 import VillagerIcons from "../components/VillagerIcons";
+import Custom404 from "./404";
+import Custom500 from './500';
 
 const Villager = async () => {
-  const data = await fetchData(apiKey);
-  const randomIndex = Math.floor(Math.random() * data.length);
-  const villager = data[randomIndex];
+  let villager;
+
+  try{
+    const data = await fetchData(apiKey);
+    if (data === 404) {
+      return <Custom404 />;
+    } 
+    const randomIndex = Math.floor(Math.random() * data.length);
+    villager = data[randomIndex];
+  } catch(err) {
+    return <Custom500 />;
+  }
 
   return (
     // background image
