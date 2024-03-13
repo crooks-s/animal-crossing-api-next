@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +9,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/images/animal-crossing-bg.jpg')",
+        "card-pattern": "url('/images/animal-crossing-wood-bg.png')",
+        "chat-pattern": "url('/images/chat-bubble.png')",
+      },
+      boxShadow: {
+        "3xl": "-20px 0 400px -15px rgba(0, 0, 0, 1)",
       },
     },
   },
