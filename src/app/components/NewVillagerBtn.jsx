@@ -20,7 +20,7 @@ const NewVillagerBtn = ({ atVillager, text }) => {
   return (
     <button
       onClick={handleClick}
-      className="bg-[#503cce] hover:bg-[#8098ef] my-2 py-2 px-3 flex items-center justify-center rounded-3xl text-white font-normal border-2 border-[#22399e]"
+      className="bg-[#503cce] hover:bg-[#8098ef] transition ease-in-out my-2 py-2 px-3 flex items-center justify-center rounded-3xl text-white font-normal border-2 border-[#22399e]"
     >
       {text ? text : "New Villager"}
     </button>
