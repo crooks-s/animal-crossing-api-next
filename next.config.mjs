@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['dodo.ac'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'dodo.ac',
+        port: '',
+        pathname: '**',
+      },
+    ],
   },
 };
 
