@@ -1,5 +1,5 @@
 import React from "react";
-import NewVillagerBtn from "../components/NewVillagerBtn";
+import NewVillagerBtn from "./components/NewVillagerBtn";
 import Image from "next/image";
 import TownHall from "../../public/images/town-hall.jpg";
 

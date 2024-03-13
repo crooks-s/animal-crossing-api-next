@@ -3,8 +3,8 @@ import Image from "next/image";
 const apiKey = process.env.NEXT_PUBLIC_NOOKIPEDIA_API_KEY;
 import fetchData from "../../api/fetch";
 import bday from "../../../public/images/birthday/bday-cake.png";
-import NewVillagerBtn from "../../components/NewVillagerBtn";
-import VillagerIcons from "../../components/VillagerIcons";
+import NewVillagerBtn from "../components/NewVillagerBtn";
+import VillagerIcons from "../components/VillagerIcons";
 
 const Villager = async () => {
   const data = await fetchData(apiKey);
