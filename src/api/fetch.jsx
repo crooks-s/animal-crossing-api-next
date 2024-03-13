@@ -9,7 +9,7 @@ export default async function fetchData(apiKey) {
 
   try {
     const response = await fetch(`https://api.nookipedia.com/villagers`, fetchOptions);
-    if (response.ok) { // if HTTP-status is 200-299, found the villager
+    if (response.ok) { // if HTTP-status is 200-299, then villager data is returned
       const data = await response.json();
       return data;
     } else { // if HTTP-status is not 200-299, return the status

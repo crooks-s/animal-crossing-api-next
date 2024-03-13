@@ -6,7 +6,9 @@ const Loading = () => {
       {/* top level card -- card background */}
       <div className="h-4/5 w-3/5 rubik flex flex-col items-center py-0 px-0 bg-cover pt-3 bg-card-pattern shadow-2xl rounded-3xl ">
         {/* name */}
-        <span className="text-white h-auto -mt-12 py-2 px-3 relative top-20 rounded-full bg-[#c0503c]">Loading name...</span>
+        <span className=" text-white h-auto -mt-12 py-2 px-3 relative top-20 rounded-full bg-[#c0503c]">
+          Loading name...
+        </span>
         {/* quote box */}
         <div className="h-32 w-full bg-chat-pattern bg-center bg-no-repeat bg-contain flex items-center justify-center mt-10">
           <p className="">Loading quote...</p>
