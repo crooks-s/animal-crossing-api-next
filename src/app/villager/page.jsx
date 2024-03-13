@@ -49,7 +49,6 @@ const Villager = async () => {
         <div className="pt-0 -mt-[15px]">
           {villager && villager.image_url ? (
             <Image
-              // className="p-4 px-4 rounded-full bg-white bg-opacity-25 border-2 border-[#fff]]"
               className="z-10 -mt-[25px]"
               src={villager.image_url}
               alt={`image of {villager.name}`}
