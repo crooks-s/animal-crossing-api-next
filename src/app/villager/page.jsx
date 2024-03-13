@@ -10,7 +10,6 @@ const Villager = async () => {
   const data = await fetchData(apiKey);
   const randomIndex = Math.floor(Math.random() * data.length);
   const villager = data[randomIndex];
-  console.log(villager);
 
   return (
     // background image
