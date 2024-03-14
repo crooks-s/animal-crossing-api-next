@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import placeholder from "../../../public/images/placeholder.png";
 
-const VillagerIcons = (props) => {
-  const { className, alt, species, personality, sign } = props;
-
+const VillagerIcons = ({ className, alt, species, personality, sign, hobby }) => {
   const importAll = (r) => {
     let images = {};
     r.keys().forEach((key) => (images[key] = r(key).default));
@@ -11,7 +10,11 @@ const VillagerIcons = (props) => {
   };
 
   const speciesImages = importAll(
-    require.context("../../../public/images/species", false, /\.(png|jpe?g|svg)$/)
+    require.context(
+      "../../../public/images/species",
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
   );
   const signsImages = importAll(
     require.context("../../../public/images/signs", false, /\.(png|jpe?g|svg)$/)
@@ -24,7 +27,11 @@ const VillagerIcons = (props) => {
     )
   );
 
-  const handleSrc = (species, personality, sign) => {
+  const hobbyImages = importAll(
+    require.context("../../../public/images/hobbies", false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const handleSrc = (species, personality, sign, hobby) => {
     if (species) {
       const speciesLower = species.toLowerCase(); // lower case d/t file naming convention in lower case
       const speciesDashes = speciesLower.replace(" ", "-"); // account for 'bear cub' species
@@ -48,13 +55,21 @@ const VillagerIcons = (props) => {
       const signSrc = signsImages[`./${signLower}.png`];
       return signSrc.src;
     }
+    if (hobby) {
+      const hobbyLower = hobby.toLowerCase(); // lower case d/t file naming convention in lower case
+      const hobbySrc = hobbyImages[`./${hobbyLower}.svg`];
+      if (!hobbySrc) {
+        return placeholder; // default to placeholder
+      }
+      return hobbySrc.src;
+    }
     return null;
   };
 
   return (
     <Image
       className={className}
-      src={handleSrc(species, personality, sign)}
+      src={handleSrc(species, personality, sign, hobby)}
       alt={alt}
       height={36}
       width={36}
