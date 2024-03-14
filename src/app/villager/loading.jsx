@@ -22,7 +22,7 @@ const Loading = () => {
           <p className="">Loading quote...</p>
         </div>
         {/* avatar */}
-        <div className="pt-10">
+        <div className="pt-5">
         <Image
             className="animate-spin"
             src={loadingIcon}
