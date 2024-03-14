@@ -12,7 +12,7 @@ const Home = () => {
           Welcome to my Animal Crossing Project!
         </span>
       <Image 
-      className="border-2 bg-[#fdf8e7] rounded-3xl mt-8"
+      className="border-2 bg-[#fdf8e7] rounded-3xl mt-6"
       src={TownHall}
       alt='picture of the town hall'
       height={500}
