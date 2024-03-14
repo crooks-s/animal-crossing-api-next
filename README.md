@@ -6,7 +6,7 @@ This is a simple application that was built with [Next.js](https://nextjs.org/) 
 
 ## Tech Stack
 Next.js
-TailwindCSS
+<br />TailwindCSS
 
 ## Process/Learning (to be updated)
 Much time on this project was spent reading ```Next.js``` and ```TailwindCSS``` documentation to learn more about both of their capabilities and applying those techniques.
