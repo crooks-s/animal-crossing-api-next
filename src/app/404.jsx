@@ -1,14 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import TownHall from "../../../public/images/town-hall.jpg";
+import NewVillagerBtn from "./components/NewVillagerBtn";
+import TownHall from "../../public/images/town-hall.jpg";
 
-const Custom500 = () => {
+const Custom404 = () => {
   return (
     <main className="bg-hero-pattern bg-center h-screen bg-no-repeat bg-cover flex items-center justify-center">
       {/* top level card -- card background */}
       <div className="h-4/5 w-3/5 rubik flex flex-col items-center py-4 px-0 bg-cover pt-3 bg-card-pattern shadow-2xl rounded-3xl ">
         <span className="text-center text-xl mt-4 py-4 px-3 rounded-full bg-[#fdf8e7]  ">
-          Sorry! Something went wrong! Please try again later.
+          Sorry! Something went wrong! Page was not found.
         </span>
       <Image 
       className="border-2 bg-[#fdf8e7] rounded-3xl my-5"
@@ -17,9 +18,10 @@ const Custom500 = () => {
       height={500}
       width={500}
       />
+        <NewVillagerBtn />
       </div>
     </main>
   )
 }
 
-export default Custom500
+export default Custom404

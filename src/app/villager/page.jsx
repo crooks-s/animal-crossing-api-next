@@ -5,8 +5,8 @@ import fetchData from "../../api/fetch";
 import bday from "../../../public/images/birthday/bday-cake.png";
 import NewVillagerBtn from "../components/NewVillagerBtn";
 import VillagerIcons from "../components/VillagerIcons";
-import Custom404 from "./404";
-import Custom500 from './500';
+import Custom404 from "../404";
+import Custom500 from '../500';
 
 const Villager = async () => {
   let villager;
