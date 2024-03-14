@@ -27,8 +27,9 @@ const Villager = async () => {
     <main className="overflow-y-auto bg-hero-pattern bg-center min-h-screen bg-no-repeat bg-cover flex items-center justify-center">
       {/* top level card -- card background */}
       <div className=" h-auto w-3/5 rubik flex flex-col items-center py-0 px-0 fixed-bg bg-cover bg-card-pattern shadow-2xl rounded-3xl  min-h-[632px] max-w-2xl min-w-96 animate-ease-in">
+
         {/* name + name background */}
-        <div className="h-auto -mt-12 py-2 px-3 relative top-20 rounded-full bg-[#c0503c]">
+        <div className="h-auto -mt-12 py-2 px-3 relative -left-28 -rotate-12 top-20 rounded-full bg-[#c0503c]">
           {/* villager name */}
           <span className="relative text-white">
             {villager && villager.name ? villager.name : "Unknown"}
