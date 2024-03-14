@@ -60,52 +60,28 @@ const Villager = async () => {
         </div>
 
         {/* species */}
-        <Attribute 
-        title={"Species"}
-        villager={villager} 
-        colorScheme={'border-[#ec9900] bg-[#ffa500]'}
-        iconColor={'border-[#ec9900] bg-[#ec9900]'}
+        <Attribute
+          title={"Species"}
+          villager={villager}
+          colorScheme={"border-[#ec9900] bg-[#ffa500]"}
+          iconColor={"border-[#ec9900] bg-[#ec9900]"}
+          addBorder={"border-2"}
         />
 
         {/* personality */}
-        <div className="items-center mt-5 rounded-xl border-8 box-border border-[#7f3d35] bg-[#983f34] h-16 w-3/4 max-w-96 flex flex-row">
-          <span className="font-normal text-white h-10 w-1/3 flex items-center justify-center">
-            Personality
-          </span>
-          <span className="bg-[#fdf8e7] w-3/4 h-full rounded-lg shadow-2xl text-center flex-grow flex items-center justify-start">
-            <div className="flex-shrink-0 ml-2 mr-2">
-              {villager && villager.personality ? (
-                <VillagerIcon
-                  className="rounded-full"
-                  personality={villager.personality}
-                  alt="species icon"
-                />
-              ) : null}
-            </div>
-            {villager && villager.personality
-              ? villager.personality
-              : "Unknown"}
-          </span>
-        </div>
+        <Attribute
+          title={"Personality"}
+          villager={villager}
+          colorScheme={"border-[#7f3d35] bg-[#983f34]"}
+          iconColor={"border-[#ec9900] bg-[#ec9900]"}
+        />
 
         {/* sign */}
-        <div className="items-center mt-5 rounded-xl border-8 box-border border-[#2e6b7b] bg-[#107896] h-16 w-3/4 max-w-96 flex flex-row">
-          <span className="font-normal text-white h-10 w-1/3 flex items-center justify-center">
-            Sign
-          </span>
-          <span className="bg-[#fdf8e7] w-3/4 h-full rounded-lg shadow-2xl text-center flex-grow flex items-center justify-start">
-            <div className="flex-shrink-0 ml-2 mr-2">
-              {villager && villager.sign ? (
-                <VillagerIcon
-                  className="rounded-full"
-                  sign={villager.sign}
-                  alt="species icon"
-                />
-              ) : null}
-            </div>
-            {villager && villager.sign ? villager.sign : "Unknown"}
-          </span>
-        </div>
+        <Attribute
+          title={"Sign"}
+          villager={villager}
+          colorScheme={"border-[#2e6b7b] bg-[#107896]"}
+        />
 
         {/* birthday */}
         <div className="items-center mt-5 rounded-xl border-8 box-border border-[#6f8141] h-16 w-3/4 max-w-96 flex flex-row bg-[#829356]">
