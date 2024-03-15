@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ChatBubble = () => {
+const ChatBubble = ({ villager }) => {
   return (
-    <div className="min-h-[10rem] w-full bg-chat-pattern bg-center bg-no-repeat bg-contain flex items-center justify-center mt-10 p-0">
+    <div className="min-h-[10rem] w-full bg-chat-pattern bg-center bg-no-repeat bg-contain flex items-center justify-center mt-10 p-0 -z-10">
     {/* //TODO: add ternary in case of null value */}
     <span className="flex items-center justify-center w-1/2">
       {villager && villager.quote
