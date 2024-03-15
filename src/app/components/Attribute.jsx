@@ -1,7 +1,14 @@
 import React from "react";
 import VillagerIcon from "./VillagerIcon";
 
-const Attribute = ({ title, villager, colorScheme, iconColor, rounded, addBorder }) => {
+const Attribute = ({
+  title,
+  villager,
+  colorScheme,
+  iconColor,
+  rounded,
+  addBorder,
+}) => {
   const lowerTitle = title.toLowerCase();
   let attribute;
   if (title === "Hobby") {
