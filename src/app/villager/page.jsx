@@ -14,6 +14,7 @@ import Custom500 from "../500";
 const Villager = async () => {
   let villager;
   let bgColor;
+  let textColor;
 
   try {
     const data = await fetchData(apiKey);
@@ -23,6 +24,7 @@ const Villager = async () => {
     const randomIndex = Math.floor(Math.random() * data.length);
     villager = data[randomIndex];
     bgColor = villager.title_color || 'e06c2d';
+    textColor = villager.text_color || '6b5c43';
   } catch (err) {
     return <Custom500 />;
   }
@@ -37,7 +39,7 @@ const Villager = async () => {
           <Image
             className="rounded-full bg-[#fdf8e7] p-2 m-0 -mt-6 -mb-16 shadow-2xl "
             src={
-              villager.nh_details
+              villager && villager.nh_details
                 ? villager.nh_details.icon_url || placeholder
                 : placeholder
             }
@@ -52,7 +54,7 @@ const Villager = async () => {
           villager={villager}
           style={{
             backgroundColor: `#${bgColor}`,
-            color: `#${villager.text_color}`,
+            color: `#${textColor}`,
           }}
         />
 
@@ -60,8 +62,8 @@ const Villager = async () => {
         <ChatBubble
           villager={villager}
           style={{
-            backgroundColor: `#${villager.title_color}`,
-            color: `#${villager.text_color}`,
+            backgroundColor: `#${bgColor}`,
+            color: `#${textColor}`,
           }}
         />
 
