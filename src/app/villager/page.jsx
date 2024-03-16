@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-const apiKey = process.env.NEXT_PUBLIC_NOOKIPEDIA_API_KEY;
+const apiKey = process.env.API_KEY;
 import fetchData from "../../api/fetch";
 import placeholder from "../../../public/images/placeholder.png";
 import NewVillagerBtn from "../components/NewVillagerBtn";
