@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 const apiKey = process.env.NEXT_PUBLIC_NOOKIPEDIA_API_KEY;
 import fetchData from "../../api/fetch";
@@ -8,25 +9,37 @@ import Attribute from "../components/Attribute";
 import ChatBubble from "../components/ChatBubble";
 import Name from "../components/Name";
 import Birthday from "../components/Birthday";
+import Loading from "./loading";
 import Custom404 from "../404";
 import Custom500 from "../500";
 
-const Villager = async () => {
-  let villager;
-  let bgColor;
-  let textColor;
+const Villager = () => {
+  let [villager, setVillager] = useState(null);
+  let [bgColor, setBgColor] = useState('e06c2d');
+  let [textColor, setTextColor] = useState('6b5c43');
 
-  try {
-    const data = await fetchData(apiKey);
-    if (data === 404) {
-      return <Custom404 />;
+  const setFetchedData = async () => {
+    try {
+      const data = await fetchData(apiKey);
+      if (data === 404) {
+        return <Custom404 />;
+      }
+      const randomIndex = Math.floor(Math.random() * data.length);
+      setVillager(data[randomIndex]);
+      setBgColor(villager.title_color || 'e06c2d');
+      setTextColor(villager.text_color || '6b5c43');
+    } catch (err) {
+      return <Custom500 />;
     }
-    const randomIndex = Math.floor(Math.random() * data.length);
-    villager = data[randomIndex];
-    bgColor = villager.title_color || 'e06c2d';
-    textColor = villager.text_color || '6b5c43';
-  } catch (err) {
-    return <Custom500 />;
+  }
+
+  useEffect(() => {
+    setFetchedData();
+  }, []);
+
+  if (!villager) {
+    // Render a loading indicator or return null while data is being fetched
+    return <Loading />;
   }
 
   return (
