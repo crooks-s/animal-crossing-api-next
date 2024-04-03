@@ -1,8 +1,8 @@
 # Treehouse Project: Display a villager using the Nookipedia API
 ## Introduction
 This is a simple application that was built with [Next.js](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/). 
-<br /> The application currently only has two routes: ```root``` and ```villager```. 
-<br /> The ```root``` page presents a basic welcome message and a button that goes to the ```villager``` route and retrieves a random villager from the Nookipedia API at the ```/villagers``` endpoint.
+<br /> The application currently only has two routes: ```root('/')``` and ```/villager```. 
+<br /> The ```root``` page presents a basic welcome message and a button that goes to the ```/villager``` route and retrieves a random villager from the Nookipedia API at the ```/villagers``` endpoint.
 
 ## Running the Project
 1. Clone the project.
@@ -13,6 +13,7 @@ This is a simple application that was built with [Next.js](https://nextjs.org/) 
 <br /> - ```npm i```  or  ```npm install``` or ```yarn``` to install the project's dependencies.
 <br /> - Run ```npm run dev``` to start the development server.
 6. The application will be hosted on [http://localhost:3000/](http://localhost:3000/)
+   - You can find a live version [here](https://nookipedia-project.up.railway.app/).
 
 ## Tech Stack
 Next.js
